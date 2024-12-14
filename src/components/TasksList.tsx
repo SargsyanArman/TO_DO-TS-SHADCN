@@ -24,7 +24,7 @@ const TaskList: React.FC<Props> = ({
 
     const taskLists = [
         {
-            id: "TaskList",
+            id: "incomplete",
             title: "Incomplete Tasks",
             tasks: tasks,
             setTasks: setTasks,
@@ -38,7 +38,7 @@ const TaskList: React.FC<Props> = ({
             bgColor: "#f7ffd4",
         },
         {
-            id: "TaskRemove",
+            id: "completed",
             title: "Completed Tasks",
             tasks: completedTask,
             setTasks: setCompletedTask,

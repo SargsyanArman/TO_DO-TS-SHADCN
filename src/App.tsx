@@ -4,15 +4,19 @@ import { Task } from "./model";
 import { Card, CardHeader, CardContent, Div } from "@/components/ui/card";
 import { DragDropContext, DropResult } from "react-beautiful-dnd";
 import TaskList from "./components/TasksList";
-import { IN_PROCESS, TASK_LIST } from "./constants/constants";
+import { IN_PROCESS, TASK_LIST } from "./constants/Constants";
 
 const App = () => {
   const [task, setTask] = useState<string>("");
   const [tasks, setTasks] = useState<Task[]>([]);
   const [completedTask, setCompletedTask] = useState<Task[]>([]);
   const [inProcessTasks, setInProcessTasks] = useState<Task[]>([]);
+
   const onDragEnd = (res: DropResult) => {
     const { destination, source } = res;
+
+    console.log('destinatin:', destination,)
+    console.log('source:', source,)
 
     if (!destination) {
       return;
